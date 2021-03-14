@@ -1,0 +1,2 @@
+#!/bin/sh
+dunstify -r 02 -u low "Battery is fully charged!"

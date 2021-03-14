@@ -1,0 +1,7 @@
+#!/bin/sh
+
+CHOSEN=$(  ls -A ~/Repos/dotfiles | egrep -v '.git|README.md'|dmenu -i -p "Configs:")
+if [ $? -eq 0 ]
+then
+   st -e nvim ~/Repos/dotfiles/$CHOSEN
+fi

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sudo rm config.h && echo "Building package..."&&
+cp config.def.h config.h && sudo make clean install 
+echo "Done!"

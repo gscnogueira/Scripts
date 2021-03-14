@@ -1,0 +1,2 @@
+#!/bin/sh
+dunstify -r 01 -u critical " Low Battery" "$( acpi | awk '{print"["$4"]"" "$5" " $6 " "$7}'|tr -d ',')"

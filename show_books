@@ -1,0 +1,11 @@
+#!/bin/sh
+
+DIR=$(ls ~/Livros|dmenu -i -p "Selecione um tema:")
+if [ $? -eq 0 ]
+then
+    BOOK=$(ls ~/Livros/"$DIR" | dmenu -i -p "Selecione um livro:")
+    if [ $? -eq 0 ]
+    then
+        zathura ~/Livros/"$DIR"/"$BOOK"
+    fi
+fi
