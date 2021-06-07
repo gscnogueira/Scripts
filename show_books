@@ -1,9 +1,9 @@
 #!/bin/sh
 
-DIR=$(ls ~/Livros|dmenu -i -p "Selecione um tema:")
+DIR=$(ls ~/Livros|dmenu -h 20 -i -p "Selecione um tema:")
 if [ $? -eq 0 ]
 then
-    BOOK=$(ls ~/Livros/"$DIR" | dmenu -i -p "Selecione um livro:")
+    BOOK=$(ls ~/Livros/"$DIR" | dmenu -h 20-i -p "Selecione um livro:")
     if [ $? -eq 0 ]
     then
         zathura ~/Livros/"$DIR"/"$BOOK"
