@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ xdg-settings get default-web-browser | sed 's/.desktop//'
